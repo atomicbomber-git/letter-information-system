@@ -20,6 +20,7 @@ class CreateLettersTable extends Migration
             $table->string("nomor");
             $table->string("pegawai_ditugaskan");
             $table->string("tujuan");
+            $table->string("kendaraan");
             $table->string("lama");
             $table->string("tanggal_berangkat");
             $table->string("tanggal_kembali");
