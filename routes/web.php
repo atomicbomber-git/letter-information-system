@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get("letter", "LetterController@index")->name("letter.index");
 Route::get("letter/create", "LetterController@create")->name("letter.create");
+Route::post("letter/store", "LetterController@store")->name("letter.store");
