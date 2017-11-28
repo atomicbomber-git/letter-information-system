@@ -29,7 +29,7 @@ class CreateLettersTable extends Migration
             $table->string("nama_pemberi_tugas");
             $table->string("golongan_pemberi_tugas");
             $table->string("nip_pemberi_tugas");
-            $table->date("tanggal_surat`");
+            $table->date("tanggal_surat");
         });
     }
 
