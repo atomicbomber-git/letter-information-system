@@ -17,19 +17,19 @@ class CreateLettersTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
-            $table->string("nomor");
-            $table->string("pegawai_ditugaskan");
-            $table->string("tujuan");
-            $table->string("kendaraan");
-            $table->string("lama");
-            $table->string("tanggal_berangkat");
-            $table->string("tanggal_kembali");
-            $table->string("pembebanan_biaya");
+            $table->string("nomor")->nullable();
+            $table->string("pegawai_ditugaskan")->nullable();
+            $table->string("tujuan")->nullable();
+            $table->string("kendaraan")->nullable();
+            $table->string("lama")->nullable();
+            $table->string("tanggal_berangkat")->nullable();
+            $table->string("tanggal_kembali")->nullable();
+            $table->string("pembebanan_biaya")->nullable();
+            $table->string("nama_pemberi_tugas")->nullable();
+            $table->string("golongan_pemberi_tugas")->nullable();
+            $table->string("nip_pemberi_tugas")->nullable();
+            $table->date("tanggal_surat")->nullable();
 
-            $table->string("nama_pemberi_tugas");
-            $table->string("golongan_pemberi_tugas");
-            $table->string("nip_pemberi_tugas");
-            $table->date("tanggal_surat");
         });
     }
 

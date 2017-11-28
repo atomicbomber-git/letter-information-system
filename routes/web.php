@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get("letter", "LetterController@index")->name("letter.index");
+Route::get("letter/create", "LetterController@create")->name("letter.create");
