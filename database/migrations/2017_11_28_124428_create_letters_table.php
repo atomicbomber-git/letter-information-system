@@ -18,6 +18,7 @@ class CreateLettersTable extends Migration
             $table->timestamps();
 
             $table->string("nomor")->nullable();
+            $table->string("pejabat_berwenang_pemberi_tugas")->nullable();
             $table->string("pegawai_ditugaskan")->nullable();
             $table->string("tujuan")->nullable();
             $table->string("kendaraan")->nullable();

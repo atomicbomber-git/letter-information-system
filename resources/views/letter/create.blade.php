@@ -13,14 +13,18 @@
                 Buat Surat Baru
             </div>
             <div class="card-body">
+                @if(session("message-success"))
+                    <div class="alert alert-success"> {{ session("message-success") }} </div>
+                @endif
+
                 <form method="POST" action="{{ route("letter.store") }}">
                     <div class="form-group">
                         <label for=""> Nomor Surat: </label>
                         <input name="nomor" type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for=""> Pegawai Ditugaskan: </label>
-                        <input name="pegawai_ditugaskan" type="text" class="form-control">
+                        <label for=""> Pejabat Berwemang Pemberi Tugas: </label>
+                        <input name="pejabat_berwenang_pemberi_tugas" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for=""> Tujuan Penugasan: </label>

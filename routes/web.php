@@ -19,6 +19,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get("letter", "LetterController@index")->name("letter.index");
-Route::get("letter/create", "LetterController@create")->name("letter.create");
-Route::post("letter/store", "LetterController@store")->name("letter.store");
+Route::redirect("/", "/letter");
+
+Route::prefix("letter")->group(function() {
+    Route::get("/", "LetterController@index")->name("letter.index");
+    Route::get("/create", "LetterController@create")->name("letter.create");
+    Route::post("/store", "LetterController@store")->name("letter.store");
+    Route::get("/delete/{letter}", "LetterController@delete")->name("letter.delete");
+
+    Route::get("/add_participant/{letter}", "ParticipantController@create")->name("participant.create");
+    Route::post("/add_participant/{letter}", "ParticipantController@store")->name("participant.store");
+});
+
+Route::get("participant/{participant}/delete", "ParticipantController@delete")->name("participant.delete");
+
+
+

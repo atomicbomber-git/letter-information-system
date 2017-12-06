@@ -17,9 +17,10 @@ class CreateParticipantsTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
-            $table->string("nama");
-            $table->string("golongan");
-            $table->string("jabatan");
+            $table->string("nama")->nullable();
+            $table->string("nip")->nullable();
+            $table->string("golongan")->nullable();
+            $table->string("jabatan")->nullable();
 
             $table->integer("letter_id")->unsigned();
             $table->foreign("letter_id")->references("id")->on("letters");

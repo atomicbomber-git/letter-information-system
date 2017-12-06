@@ -8,6 +8,7 @@ class Letter extends Model
 {
     protected $fillable = [
         "nomor",
+        "pejabat_berwenang_pemberi_tugas",
         "pegawai_ditugaskan",
         "tujuan",
         "kendaraan",
@@ -20,4 +21,9 @@ class Letter extends Model
         "nip_pemberi_tugas",
         "tanggal_surat"
     ];
+
+    public function participants()
+    {
+        return $this->hasMany("App\Participant");
+    }
 }
